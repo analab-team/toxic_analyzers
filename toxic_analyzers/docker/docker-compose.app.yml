@@ -1,0 +1,12 @@
+services:
+  toxic_analyzer:
+    image: toxic_analyzer:dev
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: toxic_analyzer
+    ports:
+      - "5062:5062/tcp"
+
+networks:
+  lighthouse_server:
